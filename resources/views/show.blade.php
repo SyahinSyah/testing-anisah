@@ -1,6 +1,16 @@
-<h1>item show</h1> 
+<x-app>
+<h3>Item Show</h3> 
 <br>
-name: {{ $item->name }} <br>
-total : {{ $item->total}} 
+<div class="form-group">
+    <label for="name">
+        name :
+    </label>
+    <input type="text" id="name" value="{{ $item->name }}" readonly class="form-control-plaintext">
+    <label for="total">
+        total :
+    </label>
+    <input type="text" id="total" value="{{ $item->total }}" readonly class="form-control-plaintext">    
+</div>
 <hr>
-<a href="\items">back to list</a>
+<a href="\items" class="btn btn-secondary">back to list</a>
+</x-app>
