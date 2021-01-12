@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ItemRequest;
 use App\Models\Item;
 use Illuminate\Http\Request;
 
@@ -18,7 +19,7 @@ class ItemController extends Controller
         return view('create');
     }
 
-    public function store(Request $request)
+    public function store(ItemRequest $request)
     {
         //dd($request->all());
         $name = $request->name;
@@ -47,7 +48,7 @@ class ItemController extends Controller
     }
 
 
-    public function edit(Request $request, $id)
+    public function edit(ItemRequest $request, $id)
     {
         //data yang dkt request tu
         $name = $request->name;
