@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ItemController;
+use App\Http\Controllers\TrackController;
 use App\Models\Item;
 use Illuminate\Support\Facades\Route;
 
@@ -22,8 +23,8 @@ Route::get('/items/{id}', [ItemController::class, 'show']);
 Route::get('/items/{id}/edit' , [ItemController::class ,'update']);
 Route::patch('items/{id}', [ItemController::class, 'edit']);
 Route::delete('items/{id}', [ItemController::class, 'destroy']);
-
-
+Route::get('/items/{id}/tracks/create' , [TrackController::class, 'create']);
+Route::post('/items/{id}/tracks', [TrackController::class, 'store']);
 
 
 // Route::get('/', function () {

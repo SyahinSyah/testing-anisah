@@ -5,14 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Item extends Model
+class Track extends Model
 {
     use HasFactory;
-
     protected $guarded = [];
 
-    public function track()
+    public function item()
     {
-        return $this->hasMany(Track::class);
+        return $this->belongsTo(Item::class);
     }
 }

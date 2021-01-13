@@ -12,5 +12,6 @@
     <input type="text" id="total" value="{{ $item->total }}" readonly class="form-control-plaintext">    
 </div>
 <hr>
+<a href="\items\{{$item->id}}\tracks\create" class="btn btn-success">Create New Track </a>
 <a href="\items" class="btn btn-secondary">back to list</a>
 </x-app>
