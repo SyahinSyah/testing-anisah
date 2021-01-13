@@ -25,7 +25,7 @@ Route::patch('items/{id}', [ItemController::class, 'edit']);
 Route::delete('items/{id}', [ItemController::class, 'destroy']);
 Route::get('/items/{id}/tracks/create' , [TrackController::class, 'create']);
 Route::post('/items/{id}/tracks', [TrackController::class, 'store']);
-
+Route::delete('/tracks/{id}' , [TrackController::class,'destroy']);
 
 // Route::get('/', function () {
 //     return view('welcome');

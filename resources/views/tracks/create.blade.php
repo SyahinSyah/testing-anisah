@@ -13,9 +13,8 @@
             <input type="radio" name="type" id="typeOut" value="out"
              class="form-check-input @error('type') is-invalid @enderror">
             <label for="typeOut" class="form-check-label">Out</label>
-        <br>
             @error('type')
-            <div class="invalid-feedback">
+            <div class="ml-2 invalid-feedback">
                 {{ $message }}
             </div>
         @enderror
@@ -24,8 +23,8 @@
         <div class="form-group">
             <label for="quantity">Quantity</label>
             <input type="text" name="quantity" id="quantity" value="{{ old('quantity')}}" class="form-control @error('quantity') is-invalid @enderror">
-            @error('quntity')
-                <div class="invalid-feedback">
+            @error('quantity')
+                <div class="ml-2 invalid-feedback">
                     {{ $message }}
                 </div>  
             @enderror
